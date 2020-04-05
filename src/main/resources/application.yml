@@ -1,0 +1,25 @@
+## 修改端口号
+server:
+  port: 8088
+  servlet:
+    context-path: /web
+# 测试信息 可忽略
+star: 
+  blog: 
+    name: duxing
+    age: 188
+    nameAndAge: ${star.blog.name}---${star.blog.age}
+
+spring:
+  #配置数据库环境 dev-开发  prod-生产
+  profiles:
+    active:
+    - dev
+# mybatis 配置信息    
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  file: D:\java\soft\log\starlog.log
+    
+         

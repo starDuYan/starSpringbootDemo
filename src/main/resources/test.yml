@@ -1,0 +1,5 @@
+# 测试数据 可忽略
+star: 
+  name: yan
+  age: 26
+  nameAndAge: ${star.blog.name}-aaaaa--${star.blog.age}
