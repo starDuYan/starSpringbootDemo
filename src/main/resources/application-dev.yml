@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 80
 spring:
   datasource:
     druid:
@@ -49,7 +49,7 @@ spring:
         # 忽略过滤的格式
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
       
-      # StatViewServlet配置 
+      # StatViewServlet配置
       stat-view-servlet:
         enabled: true
         # 访问路径为/druid时，跳转到StatViewServlet
@@ -66,5 +66,10 @@ spring:
       
       # 配置StatFilter
       filter: 
-        stat: 
+        stat:
           log-slow-sql: true
+  thymeleaf:
+    cache: false
+logging:
+  level:
+    root: debug
