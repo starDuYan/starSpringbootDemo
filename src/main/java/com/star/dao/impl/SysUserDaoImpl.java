@@ -1,11 +1,7 @@
 package com.star.dao.impl;
 
-import com.star.bean.Student;
 import com.star.bean.SysUser;
-import com.star.bean.Syslog;
 import com.star.dao.SysUserDao;
-import com.star.dao.SyslogDao;
-import com.star.mapper.StudentMapper;
 import com.star.mapper.SysUserMapper;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +34,19 @@ public class SysUserDaoImpl implements SysUserDao {
         String sql = "select * from sys_user where id=?";
         Object[] args = { id };
         int[] argTypes = { Types.BIGINT };
+        List<SysUser> list = this.jdbcTemplate.query(sql, args, argTypes, new SysUserMapper());
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public SysUser queryByName(String username) {
+        String sql = "select * from sys_user where username=?";
+        Object[] args = { username };
+        int[] argTypes = { Types.VARCHAR };
         List<SysUser> list = this.jdbcTemplate.query(sql, args, argTypes, new SysUserMapper());
         if (list != null && list.size() > 0) {
             return list.get(0);

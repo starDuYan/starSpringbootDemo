@@ -1,7 +1,7 @@
 package com.star.dao;
 
 import com.star.bean.SysUser;
-import org.springframework.data.repository.query.Param;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,6 +21,14 @@ public interface SysUserDao {
      * @return 实例对象
      */
     SysUser queryById(Long id);
+
+    /**
+     * 通过username查询单条数据
+     *
+     * @param username
+     * @return 实例对象
+     */
+    SysUser queryByName(String username);
 
     /**
      * 查询指定行数据

@@ -2,6 +2,7 @@ package com.star;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
 * @Description: 
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 * @Date: 2020/04/01
 */
 @SpringBootApplication
+@EnableCaching //缓存 20200409
 public class StarSpringbootJdbcTemplateApplication {
 
     public static void main(String[] args) {

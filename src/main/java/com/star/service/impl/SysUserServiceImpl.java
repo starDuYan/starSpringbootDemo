@@ -6,7 +6,6 @@ import com.star.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -30,6 +29,17 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public SysUser queryById(Long id) {
         return this.sysUserDao.queryById(id);
+    }
+    /**
+     * 通过username查询单条数据
+     *
+     * @param username 主键
+     * @return 实例对象
+     */
+
+    @Override
+    public SysUser queryByName(String username) {
+        return this.sysUserDao.queryByName(username);
     }
 
     /**

@@ -24,6 +24,7 @@ import java.sql.Timestamp;
  * @version V1.0
  * @Package com.star.aspect
  * @date 2020/04/05 15:53
+ * 针对多数据源保持log信息
  */
 @Aspect
 @Component

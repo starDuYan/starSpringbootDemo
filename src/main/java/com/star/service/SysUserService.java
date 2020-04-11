@@ -21,6 +21,14 @@ public interface SysUserService {
     SysUser queryById(Long id);
 
     /**
+     * 通过username查询单条数据
+     *
+     * @param username
+     * @return 实例对象
+     */
+    SysUser queryByName(String username);
+
+    /**
      * 查询多条数据
      *
      * @param offset 查询起始位置
